@@ -29,13 +29,45 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
     gender: "female"
   }
 ] 
-for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
-    if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "female") {
-        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. SHE may not come in." )
-    }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "male") {
-        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. HE may not come in." )
-    }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[[i].gender === "female"]) {
-        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough. Let HER in")
-    }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[[i].gender === "male"])
-        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough. Let Him in.")
+//first and last objects repeat themselves
+// for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
+//     if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "female") {
+//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. SHE may not come in." )
+//     }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "male") {
+//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. HE may not come in." )
+//     }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[[i].gender === "female"]) {
+//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough. Let HER in")
+//     }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[[i].gender === "male"])
+//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough. Let Him in.")
+//     }else {
+//         console.log()
+//     }
+//Preliminaries
+// for (i = 0; i <=9; i++) {
+//     console.log(i)
+// }
+// for (i = 9; i >= 0; i--) {
+//     console.log(i)
+// }
+
+// var fruit = ["banana", "orange", "apple", "kiwi"]
+// for(var i = 0; i < fruit.length; i++) {
+//     console.log(fruit[i])
+// }
+
+//Bronze
+// var numArray = []
+// for (i = 0; i <= 9; i++) {
+//     console.log(numArray.push(i))
+// }
+// for (i = 0; i <= 100; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i)
+//     }
+// }
+var fruit = ["banana", "orange", "apple", "kiwi", "pear", "peach"]
+for(i = 0; i < fruit.length; i++) {
+    if(fruit[i] % 2 === 0) {
+        console.log(fruit[i])
     }
+}
