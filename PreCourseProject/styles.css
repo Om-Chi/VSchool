@@ -1,0 +1,15 @@
+body{
+    background-color: mintcream;
+}
+h1 {
+    color: orchid;
+}
+img {
+    width: 500px;
+    height: 500px;
+}
+.message{
+    font-style: normal;
+    font-family: cursive;
+}
+

@@ -1,0 +1,222 @@
+/*FRENCH flag*/
+.blue {
+    background-color: #002495;
+    position: absolute;
+    width: 100px;
+    padding-top: 15%;
+}
+.white {
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    padding-top: 15%;
+    left: 108px;
+    border: thin solid lightgray;
+}
+.FR-red {
+    background-color: #ED2938;
+    position: absolute;
+    width: 100px;
+    padding-top: 15%;
+    left: 208px;
+}
+
+/* GERMANY flag*/
+.container {
+    background-color: violet;
+    border: thin solid;
+    padding-top: 16.66%;
+    width: 300px;
+    position: absolute;
+    left: 310px;
+}
+.black {
+    background-color: black;
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    top: 0px;
+}
+.GR-red {
+    background-color: #DE0002;
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    top: 80px;
+}
+.yellow {
+    background-color: #FFCE00;
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    bottom: 0px;
+}
+
+/* MADAGASCAR flag*/
+.container2 {
+    background-color: violet;
+    padding-top: 15%;
+    width: 300px;
+    position: absolute;
+    left: 615px;
+    border: thin solid lightgrey;
+}
+.MA-white {
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    height: 216px;
+    top: 0px;
+}
+.MA-red {
+    background-color: #FC3E32;
+    position: absolute;
+    width: 200px;
+    height: 108px;
+    left: 100px;
+    top: 0px;
+}
+.green {
+    background-color: #007E39;
+    position: absolute;
+    width: 200px;
+    height: 108px;
+    bottom: 0px;
+    left: 100px;
+}
+
+/* SWITZERLAND flag */
+.SW-red {
+    background-color: #FF0002;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 230px;
+}
+.SW-whitetop {
+    background-color: white;
+    height: 150px;
+    width: 50px;
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+}
+.SW-whitethru {
+    background-color: white;
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+}
+
+/* SWEDEN flag*/
+.SWe-blue {
+    background-color: #0269A6;
+    padding-top: 16%;
+    width: 320px;
+    position: absolute;
+    top: 270px;
+    left: 260px;
+}
+.yellowtop { 
+    background-color: #FECC00;
+    height: 230px;
+    width: 20px;
+    position: absolute;
+    top: 0px;
+    left: 110px;
+}
+.yellowthru {
+    background-color: #FECC00;
+    height: 20px;
+    width: 320px;
+    position: absolute;
+    top: 100px;
+}
+
+/*GAMBIA flag*/
+.container3 {
+    background-color: white;
+    position: absolute;
+    padding-top: 15%;
+    width: 300px;
+    border: thin solid;
+    top: 260px;
+    left: 600px;
+}
+.GA-red {
+    background-color: #CE1127;
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    top: 0px;
+}
+.GA-blue {
+    background-color: #0D1D8B;
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    top: 80px;
+}
+.GA-green {
+    background-color: #3B7827;
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    bottom: 0px;
+}
+
+.container4 {
+    background-color: white;
+    padding-top: 15%;
+    position: absolute;
+    width: 330px;
+    top: 520px;
+    border: thin solid;
+}
+.JA-dot { /*Whats a more effective way of centering the dot?*/
+    height: 100px;
+    width: 100px;
+    background-color: #BC022C;
+    border-radius: 50%;
+    position: absolute;
+    left: 115px;
+    bottom: 60px;
+}
+
+/*NIGER flag*/
+.container5 {
+    background-color: white;
+    padding-top: 11.67%;
+    position: absolute;
+    width: 330px;
+    top: 520px;
+    left: 350px;
+    border: thin solid;
+}
+.orange {
+    background-color: #E15307;
+    position: absolute;
+    width: 330px;
+    height: 55px;
+    top: 0px;
+}
+.or-dot {
+    height: 50px;
+    width: 50px;
+    background-color: #E15307;
+    border-radius: 50%;
+    position: absolute;
+    left: 140px;
+    bottom: 60px;
+}
+.NI-green {
+    background-color: #10AF2A;
+    position: absolute;
+    width: 330px;
+    height: 55px;
+    bottom: 0px;
+}
+
+/*How would I determine the height of the aspect ratio if I just input a width?

@@ -1,0 +1,189 @@
+html, body {
+    background-color: whitesmoke;
+    margin: 20px;
+  }
+  
+  /*exercise ONE*/
+.container {
+    display: grid;
+    grid-gap: 8px;
+    color: darkgrey;
+    font-size: 2em;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+.red {
+    background-color: tomato;
+    grid-column: 1/3;
+}
+
+.blue {
+    background-color: royalblue;
+    grid-column: 3/-1;
+}
+
+.green {
+    background-color: green;
+    grid-column: 1/2;
+}
+
+.violet {
+    background-color: blueviolet;
+    grid-column: 2/-1;
+}
+
+.yellow {
+    background-color: gold;
+    grid-column: 1/-1;
+}
+
+/*exercise TWO*/
+/*.container {
+    display: grid;
+    font-size: 2em;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 100px 100px 1
+    grid-template-areas: 
+                "t t t t"
+                "b b m m"
+                "b b l r";
+}
+
+.top {
+    background-color: orangered;
+    grid-area: t;
+}
+
+.blarge {
+    background-color: orange;
+    grid-area: b;
+}
+
+.mreen {
+    background-color: coral;
+    grid-area: m;
+}
+
+.left {
+    background-color: royalblue;
+    grid-area: l;
+}
+
+.right {
+    background-color: blue;
+    grid-area: r;
+}*/
+
+/*mobile
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-gap: 8px;
+        color: darkgrey;
+        font-size: 2em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 100px 50px 50px;
+    }
+    
+    .red {
+        background-color: tomato;
+    }
+    
+    .blue {
+        background-color: royalblue;
+    }
+    
+    .green {
+        background-color: green;
+    }
+    
+    .violet {
+        background-color: blueviolet;
+    }
+    
+    .yellow {
+        background-color: gold;
+    }
+}
+/*tablet
+ @media only screen and (min-width: 600px) and (max-width: 1290px) {
+    .container {
+        display: grid;
+        grid-gap: 8px;
+        color: darkgrey;
+        font-size: 2em;
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 100px 50px 50px;
+    }
+    
+    .red {
+        background-color: tomato;
+        grid-column: 1/-1;
+
+    }
+    
+    .blue {
+        background-color: royalblue;
+        grid-column: 1/2;
+
+    }
+    
+    .green {
+        background-color: green;
+        grid-column: 2/-1;
+    }
+    
+    .violet {
+        background-color: blueviolet;
+        grid-column: 1/-1;
+    }
+    
+    .yellow {
+        background-color: gold;
+        grid-column: 1/-1;
+
+    }
+}
+/*laptop
+@media only screen and (min-width: 1290px), (max-width:1600px) {
+    .container {
+        display: grid;
+        grid-gap: 8px;
+        color: darkgrey;
+        font-size: 2em;
+        
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40px 200px 40px;
+    }
+    
+    .red {
+        background-color: tomato;
+        grid-column: 1/5;
+
+    }
+    
+    .blue {
+        background-color: royalblue;
+        grid-column: 1/2;
+
+    }
+    
+    .green {
+        background-color: green;
+        grid-column: 2/4;
+    }
+    
+    .violet {
+        background-color: blueviolet;
+        grid-column: 4/5;
+    }
+    
+    .yellow {
+        background-color: gold;
+        grid-column: 1/-1;
+
+    }
+}

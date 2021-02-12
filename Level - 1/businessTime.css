@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#head-container {
+    padding: 20px;
+    border-bottom: solid chartreuse;
+    justify-content: space-between;
+}
+#head-container > div:first-child {border-right: solid darkgray; font-family: cursive; font-size: 12mm;}
+#head-container > div:nth-child(2) {align-self: flex-end;}
+#head-container > div:nth-child(3) {align-self: flex-end;}
+#head-container > div:last-child {align-self: flex-end;}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    
+
+}
+#navigation > span:nth-child(1) {
+padding: 15px;
+border: solid gray;
+flex-grow: 2;
+font-family: 'Courier New', Courier, monospace;
+color: whitesmoke;
+font-size: 9mm;
+background-image: url('https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yMjA0NDQ0NS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYzMzc5NTE2NX0.wpy6hGGPntuBjoFLKb8ueswePd2Kg9LFX30Xuu0GqP4/img.jpg?width=980');
+}
+#navigation > span:nth-child(2) {
+padding: 15px;
+border: solid gray;
+flex: 200px;
+text-align: end;
+background-color: coral;
+font-size: 8mm;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: darkblue;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid lavender;
+    height: 40px;
+    background-color: lavenderblush;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    border: 5px solid #ffcc5c;
+    height: 100%;
+}
+
+.home {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+/*.search {
+    
+}*/
+.logout {
+    flex-grow: 2;
+  flex-basis: 200px;
+}

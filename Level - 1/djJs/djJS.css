@@ -1,0 +1,33 @@
+body {
+    margin: 10px;
+}
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 300px;
+    border: solid cyan;
+    height: 150px;
+}
+#beatOne {
+    display: flex;
+    border: thin solid gray;
+    height: 150px;
+    width: 150px;
+    background-color: lavenderblush;
+    align-items: center;
+    justify-content: center;
+}
+#beatTwo {
+    display: flex;
+    background-color: mintcream;
+    border: thin solid gray;
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+}
+/*.collect {
+    null
+}
