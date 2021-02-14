@@ -55,19 +55,42 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
 //     console.log(fruit[i])
 // }
 
-//Bronze
+//Bronze - ???? unable to print 0 and Why is it printing 10 comapred to my data in the first preliminaries practice???
 // var numArray = []
 // for (i = 0; i <= 9; i++) {
-//     console.log(numArray.push(i))
+//     console.log(numArray.push(i))     
 // }
 // for (i = 0; i <= 100; i++) {
 //     if (i % 2 === 0) {
 //         console.log(i)
 //     }
 // }
-var fruit = ["banana", "orange", "apple", "kiwi", "pear", "peach"]
-for(i = 0; i < fruit.length; i++) {
-    if(fruit[i] % 2 === 0) {
-        console.log(fruit[i])
-    }
-}
+// var fruit = ["banana", "orange", "apple", "kiwi", "pear", "peach"]
+// for(i = 0; i < fruit.length; i++) {
+//     if([i] % 2 === 0) {
+//         console.log(fruit[i])
+//     }
+// }
+
+//Silver
+var peopleArray = [
+  {
+    name: "Harrison Ford",
+    occupation: "Actor"
+  },
+  {
+    name: "Justin Bieber",
+    occupation: "Singer"
+  },
+  {
+    name: "Vladimir Putin",
+    occupation: "Politician"
+  },
+  {
+    name: "Oprah",
+    occupation: "Entertainer"
+  }
+]
+ for(i = 0; i < peopleArray.length; i++) {
+   console.log(peopleArray[i].name)
+ }
