@@ -57,9 +57,10 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
 
 //Bronze - ???? unable to print 0 and Why is it printing 10 comapred to my data in the first preliminaries practice???
 // var numArray = []
-// for (i = 0; i <= 9; i++) {
-//     console.log(numArray.push(i))     
+// for (var i = 0; i <= 9; i++) {
+//   numArray.push(i)      
 // }
+// console.log(numArray)
 // for (i = 0; i <= 100; i++) {
 //     if (i % 2 === 0) {
 //         console.log(i)
@@ -91,6 +92,12 @@ var peopleArray = [
     occupation: "Entertainer"
   }
 ]
+//  for(i = 0; i < peopleArray.length; i++) {
+//    console.log(peopleArray[i].name)
+//  }
+how do i push these names into an empty Array
+ var namesArr = [""]
+ var occupationArr = []
  for(i = 0; i < peopleArray.length; i++) {
-   console.log(peopleArray[i].name)
+   console.log(namesArr.push(peopleArray[i].name))
  }
