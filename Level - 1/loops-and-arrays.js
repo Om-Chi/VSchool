@@ -95,7 +95,7 @@ var peopleArray = [
 //  for(i = 0; i < peopleArray.length; i++) {
 //    console.log(peopleArray[i].name)
 //  }
-how do i push these names into an empty Array
+//how do i push these names into an empty Array
  var namesArr = [""]
  var occupationArr = []
  for(i = 0; i < peopleArray.length; i++) {
