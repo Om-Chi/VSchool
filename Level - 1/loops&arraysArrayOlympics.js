@@ -29,19 +29,18 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
     gender: "female"
   }
 ] 
-//first and last objects repeat themselves
-// for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
-//     if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "female") {
-//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. SHE may not come in." )
-//     }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "male") {
-//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. HE may not come in." )
-//     }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[[i].gender === "female"]) {
-//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough. Let HER in")
-//     }else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[[i].gender === "male"])
-//         console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough. Let Him in.")
-//     }else {
-//         console.log()
-//     }
+// first and last objects repeat themselves
+for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
+  for (var j = 0; j < peopleWhoWantToSeeMadMaxFuryRoad[i].length; j++) {
+    if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i][j].gender === "female") {
+      console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. SHE may not come in." )
+  }else if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i][j].gender === "male") {
+      console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. HE may not come in." )
+  }else if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age >= 18) {
+      console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough.")
+    }
+  }
+}
 //Preliminaries
 // for (i = 0; i <=9; i++) {
 //     console.log(i)
@@ -55,12 +54,13 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
 //     console.log(fruit[i])
 // }
 
-//Bronze - ???? unable to print 0 and Why is it printing 10 comapred to my data in the first preliminaries practice???
+//Bronze 
 // var numArray = []
 // for (var i = 0; i <= 9; i++) {
 //   numArray.push(i)      
 // }
 // console.log(numArray)
+
 // for (i = 0; i <= 100; i++) {
 //     if (i % 2 === 0) {
 //         console.log(i)
@@ -95,9 +95,12 @@ var peopleArray = [
 //  for(i = 0; i < peopleArray.length; i++) {
 //    console.log(peopleArray[i].name)
 //  }
-//how do i push these names into an empty Array
- var namesArr = [""]
- var occupationArr = []
- for(i = 0; i < peopleArray.length; i++) {
-   console.log(namesArr.push(peopleArray[i].name))
- }
+//
+//  var namesArr = []
+//  var occupationArr = []
+//  for(i = 0; i < peopleArray.length; i++) {
+//    namesArr.push(peopleArray[i].name)
+//    occupationArr.push(peopleArray[i].occupation)
+//  }
+//  console.log(namesArr)
+//  console.log(occupationArr)
