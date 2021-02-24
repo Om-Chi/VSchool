@@ -1,5 +1,5 @@
 
-// add ":" somehow - line 4????
+// add ":" somehow - line 3????
 var people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
 var alphabet = "abcdefghijklmnopqrstuvwxyz"
 //convert alphabet to uppercase
@@ -7,15 +7,16 @@ var upAlpha = alphabet.toUpperCase()
 //split() alphabet
 var newAlpha = upAlpha.split("")
 
-// function forception(ppl, alpha) {}
-for (var i = 0; i < people.length; i++){
-    var eachPpl = [people[i]]
-    console.log(eachPpl)
-    for(j = 0; j < eachPpl.length; j++) {
-        var newArr = eachPpl.concat(newAlpha)
-        console.log(newArr)
-    }
+function forception(ppl, alpha) {
+    for (var i = 0; i < ppl.length; i++){
+        var eachPpl = [ppl[i]]
+        for(j = 0; j < eachPpl.length; j++) {
+            var newArr = eachPpl.concat(alpha)
+            console.log(newArr)
+        }
+    } return newArr
 }
+forception(people, newAlpha)
 
 // for (var i = 0; i < people.length; i++){
 //     if (people[i] % 2 === 0) {
