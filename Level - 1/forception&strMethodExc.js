@@ -1,20 +1,29 @@
+
 // add ":" somehow - line 4????
-// var people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
-// var alphabet = "abcdefghijklmnopqrstuvwxyz"
+var people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
+var alphabet = "abcdefghijklmnopqrstuvwxyz"
 //convert alphabet to uppercase
-// var upAlpha = alphabet.toUpperCase()
+var upAlpha = alphabet.toUpperCase()
 //split() alphabet
-// var splitAlpha = upAlpha.split("")
+var newAlpha = upAlpha.split("")
 
 // function forception(ppl, alpha) {}
-// for (i = 0; i < people.length; i++){
-//     var eachPpl = [people[i]]
-//     console.log(eachPpl)
-//     for(j = upAlpha; j < eachPpl.length; j++) {
-//         var newArr = eachPpl.concat(upAlpha)
-//         console.log(newArr)
+for (var i = 0; i < people.length; i++){
+    var eachPpl = [people[i]]
+    console.log(eachPpl)
+    for(j = 0; j < eachPpl.length; j++) {
+        var newArr = eachPpl.concat(newAlpha)
+        console.log(newArr)
+    }
+}
+
+// for (var i = 0; i < people.length; i++){
+//     if (people[i] % 2 === 0) {
+//         people.splice([i], 0, newAlpha)
 //     }
-// }
+//     }
+// console.log(people)
+
 //END of Forception
 
 //"HELLOhello"
@@ -41,11 +50,11 @@
 // }
 // console.log(sliced("Strawberry"))
 
-function upLowr(string4) {
-    var string = string4
-    var halfLength = Math.floor(string.length / 2)
-    var firstHalf = string.slice(0, halfLength)
-    var secondHalf = string.slice(halfLength)
-    return firstHalf.toUpperCase() + secondHalf.toLowerCase()
-}
-console.log(upLowr("hello"))
+// function upLowr(string4) {
+//     var string = string4
+//     var halfLength = Math.floor(string.length / 2)
+//     var firstHalf = string.slice(0, halfLength)
+//     var secondHalf = string.slice(halfLength)
+//     return firstHalf.toUpperCase() + secondHalf.toLowerCase()
+// }
+// console.log(upLowr("hello"))
