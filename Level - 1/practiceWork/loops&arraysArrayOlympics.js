@@ -30,17 +30,17 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
   }
 ] 
 // first and last objects repeat themselves
-for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
-  for (var j = 0; j < peopleWhoWantToSeeMadMaxFuryRoad[i].length; j++) {
-    if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i][j].gender === "female") {
-      console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. SHE may not come in." )
-  }else if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i][j].gender === "male") {
-      console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. HE may not come in." )
-  }else if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age >= 18) {
-      console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough.")
-    }
-  }
-}
+// for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
+//   for (var j = 0; j < peopleWhoWantToSeeMadMaxFuryRoad[i].length; j++) {
+//     if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i][j].gender === "female") {
+//       console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. SHE may not come in." )
+//   }else if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i][j].gender === "male") {
+//       console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough. HE may not come in." )
+//   }else if (peopleWhoWantToSeeMadMaxFuryRoad[i][j].age >= 18) {
+//       console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough.")
+//     }
+//   }
+// }
 //Preliminaries
 // for (i = 0; i <=9; i++) {
 //     console.log(i)

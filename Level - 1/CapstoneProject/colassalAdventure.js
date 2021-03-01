@@ -10,16 +10,17 @@ let playerOne = readlineSync.question('What is your name? ')
 
 //INVENTORY - array/object to store awards, and empty array to hold user's awards
 let awardsToWin = ['Dagger', 'Book of Secrets', 'Shield', 'First-Aid', 'Snacks', 'Booster-Boots']
+let consolationPrize = ['snacks', 'beets&Greens', 'water']
 let playerInventory = {Player1: playerOne, HP: 25, Awards: ''}
     //player kills enemy, player is awarded items - push() items in player inventory
     //player hits 'p' or 'print', console prints players name, HP and inventory - some form of readline Sync input method
 
 //Enemies at random ??? Its not working, remove these
 let galleryOfFoes = ["Babla the Funk", "Scion the Grudge", "Tempa the Misfit"]
-function pickEnemy(arr) {
-    let result = Math.floor(Math.random() * arr.length)
-    var enemyPicked = arr[result]
-    return enemyPicked
+function randomItem(min, max) {
+    let mathR = Math.random() * (max - min + 1)
+    let mathF = Math.floor(mathR) + min
+    return mathF
 }
 
 //Random Random - for HP and chances to escape
@@ -27,28 +28,36 @@ const extraRandom = (max) => {
     let final = Math.floor(Math.random() * max) + 1
     return final
 }
-console.log(extraRandom(galleryOfFoes.length))
 
 // while loop; Tell player to walk or check inventory
 var hitPoints = playerInventory.HP
-while (hitPoints > 0) {}
+// while (hitPoints > 0) {}
 var userSelection = readlineSync.question('Would you like to take a walk? TYPE "w" or TYPE "p" to check inventory ')
 if (userSelection === "p") {
     console.log(playerInventory)
     var userSelection = readlineSync.question('Would you like to take a walk? TYPE "w" or TYPE "p" to check inventory ')
 //function: "w" equals random 1/4 chance of being approached to be attacked  
 } else if (userSelection === "w") {
-    var randomWalk = Math.floor((Math.random() * 4) + 1)
-    if (randomWalk === 2) { //warn user, give option to run or fight
-        var fightFlight = readlineSync.question('Look out!!! An enemy approaches! What will you do? Type "run" or "attack"')
+    var randomWalk = extraRandom(4)
+    if (randomWalk === 2) { //warn user, give option to run or fight & introduce enemy
+        let index = randomItem(0, galleryOfFoes.length)
+        var fightFlight = readlineSync.question(`Look out!!! ${galleryOfFoes[index]} approaches! What will you do? Type "run" or "fight" `)
         if (fightFlight === "fight") {
-            //pickEnemy function
             console.log('pow, Slice, boom!')
-            //must deduct HP
+            //must deduct & showcase HP ???
             var newHP = extraRandom(hitPoints)
             hitPoints - newHP
+        }else if (fightFlight === "run") { //deduct HP, 50% chance of escape ???
+            var mightRun = extraRandom(2)
         }
-    }else if (randomWalk !== 2) {}//extraRandom to receive awardsToWin
+    }else if (randomWalk !== 2) {
+        var luckitems = randomItem(0, consolationPrize.length - 1)
+        var newItem = consolationPrize[luckitems]
+        playerInventory.Awards = newItem
+        readlineSync.keyIn(`Traveling can be rough. You found something along the way`)
+        readlineSync.keyIn(console.log(playerInventory))
+        //needs to loop back to the beginning
+    }
 }else {
     console.log('You must choose ' + userSelection)
 }
