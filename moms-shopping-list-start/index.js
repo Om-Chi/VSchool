@@ -20,14 +20,12 @@ document.getElementById("add-todo").addEventListener("submit", function (e) {
     xButton.style.margin = "2px"
     editB.textContent = "edit"
     xButton.textContent = "X"
-    var listItem = newLi.append(newDiv, editB, xButton)
+    newLi.append(newDiv, editB, xButton)
     momUl.append(newLi)
 
 function event() {
     var momUl = document.getElementById("list")
-    momUl.removeChild(listItem) 
+    return momUl.removeChild(newLi) 
 }
 xButton.addEventListener("click", event)
 })
-
-console.log("Hello")
