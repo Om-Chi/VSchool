@@ -27,7 +27,12 @@ function randomItem(min, max) {
 
 const prizes = () => {
     var popped = awardsToWin.pop()
+<<<<<<< HEAD
     return popped
+=======
+    awards.push(popped)
+    console.log(awards)
+>>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
 }
 
 //Random Random - for HP and chances to escape
@@ -49,7 +54,11 @@ const theFight = (max) => {
 
 // while loop; Tell player to walk or check player
 var hitPoints = player.HP
+<<<<<<< HEAD
 let gameOver = false
+=======
+const gameOver = false
+>>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
 while (gameOver === false) {
 var userSelection = readlineSync.question('Would you like to take a walk? TYPE "w" or TYPE "p" to check player ')
 if (userSelection === "p") {
@@ -68,6 +77,7 @@ if (userSelection === "p") {
             theFight(20)
             let deductHP = extraRandom(player.HP)
             player.HP -= deductHP
+<<<<<<< HEAD
             awards.push(prizes())
             console.log(player)
             console.log(awards)
@@ -76,12 +86,19 @@ if (userSelection === "p") {
                 console.log("You have been defeated")
                 gameOver = true
             }
+=======
+            // prizes(awards)
+            console.log(player)
+            console.log(prizes(awards))
+            hitPoints
+>>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
         }else if (fightFlight === "run" && mightRun === 1) {
             readlineSync.keyInPause(`You were unable to escape, and ${galleryOfFoes[index]} attacks you.`)
             readlineSync.keyInPause('hi-Ya, ooh, Ouch, Wam!')
             theFight(30)
             let deductHP = extraRandom(player.HP)
             player.HP -= deductHP
+<<<<<<< HEAD
             awards.push(prizes())
             console.log(player)
             console.log(awards)
@@ -104,6 +121,22 @@ if (userSelection === "p") {
             }
         }
     }else if (randomWalk !== 2 && randomWalk !== 3) {
+=======
+            //prizes(awards)
+            console.log(player)
+            console.log(prizes(awards))
+            hitPoints
+            
+        }else if (fightFlight === "run" && mightRun === 2) {
+            readlineSync.keyInPause("That was close, but you were able to escape.")
+            let deductHP2 = extraRandom(player.HP)
+            player.HP -= deductHP2
+            console.log(player)
+            console.log(awards)
+            hitPoints
+        }
+    }else if (randomWalk !== 2 === randomWalk !== 3) {
+>>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
         readlineSync.keyIn(`Traveling can be rough. You found something along the way`)
         var luckitems = randomItem(0, consolationPrize.length - 1)
         let newItem = consolationPrize[luckitems]
@@ -117,7 +150,11 @@ if (userSelection === "p") {
             gameOver = true
         }
     }
+<<<<<<< HEAD
 }
+=======
+}}
+>>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
 //console.log(userSelection)
     // attack or run //condition if approached by enemy or not: 2 user is approached
     // if run, random amount of damage, 50% of escaping, user receives message and must "w" - QUESTION readline sync

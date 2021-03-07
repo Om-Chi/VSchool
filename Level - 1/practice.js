@@ -18,7 +18,11 @@
 
 //array of Enemies
 let galleryOfFoes = [{enemy: "Babla the Funk", attackPTS: 10}, {enemy: "Scion the Grudge", attackPTS: 20}, {enemy: "Tempa the Misfit", attackPTS: 30}]
+<<<<<<< HEAD
 let newArray = []
+=======
+let array = []
+>>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
 //FUNCTIONS
 const printPlayerInfo = (selection) => {
     //print player info & inventory
@@ -44,7 +48,15 @@ function randomItem(min, max) {
 
 const prizes = () => {
     var popped = galleryOfFoes.pop()
+<<<<<<< HEAD
     return popped
 }
 newArray.push(prizes())
 console.log(newArray)
+=======
+    array.push(popped)
+    console.log(array)
+}
+prizes()
+
+>>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
