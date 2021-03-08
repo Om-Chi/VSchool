@@ -1,24 +1,25 @@
 const readlineSync = require('readline-sync');
 
 //Greet Player w/ message. Ask and store name in variable, const - QUESTION readline sync
-// readlineSync.keyInPause("Welcome to the colossus of all adventures...Colossal Adventure")
-// readlineSync.keyInPause("Travel far and defeat the worst villians that pillage and devastate the land.")
-// readlineSync.keyInPause("Rules: Along the way you may win awards and gather items to help you on your way.\nWhen approached by an enemy you may cower and run\nbut you will lose HP.")
-// readlineSync.keyInPause("However, if you stand your ground and defeat said foe\nyou will gain HP and more rewards!")
+readlineSync.keyInPause("Welcome to the colossus of all adventures...Colossal Adventure")
+readlineSync.keyInPause("Travel far and defeat the worst villians that pillage and devastate the land.")
+readlineSync.keyInPause("Rules: Along the way you may win awards and gather items to help you on your way.\nWhen approached by an enemy you may cower and run\nbut you will lose HP.")
+readlineSync.keyInPause("However, if you stand your ground and defeat said foe\nyou will gain HP and more rewards!")
 let playerOne = readlineSync.question('What is your name? ')
 console.log(`Greetings, ${playerOne} and safe travels...`)
 
 //player - array/object to store awards, and empty array to hold user's awards
-let awardsToWin = ['Dagger', 'Book of Secrets', 'Shield', 'First-Aid', 'Snacks', 'Booster-Boots']
-let consolationPrize = ['snacks', 'beets&Greens', 'water', 'sugar water', 'more snacks', 'ice', 'goat milk']
-let player = {Player1: playerOne, HP: 25}
+let awardsToWin = ['Dagger', 'Book of Secrets', 'Shield', 'First-Aid', 'Boomerang', 'Booster-Boots']
+let consolationPrize = ['snacks', 'beets&Greens', 'water', 'sugar water', 'soup', 'ice', 'goat milk', 'socks', 'blanket']
+let player = {Player1: playerOne, HP: 50}
 let awards = []
     //player kills enemy, player is awarded items - push() items in player awards
     //player hits 'p' or 'print', console prints players name, HP and player - some form of readline Sync input method
 
+//The Enemies
+let galleryOfFoes = [{name: "Babla the Funk", AP: 10}, {name: "Scion the Grudge", AP: 15}, {name: "Tempa the Misfit", AP: 25}]
 
-let galleryOfFoes = ["Babla the Funk", "Scion the Grudge", "Tempa the Misfit"]
-
+//Returns random
 function randomItem(min, max) {
     let mathR = Math.random() * (max - min + 1)
     let mathF = Math.floor(mathR) + min
@@ -27,12 +28,7 @@ function randomItem(min, max) {
 
 const prizes = () => {
     var popped = awardsToWin.pop()
-<<<<<<< HEAD
     return popped
-=======
-    awards.push(popped)
-    console.log(awards)
->>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
 }
 
 //Random Random - for HP and chances to escape
@@ -45,6 +41,7 @@ const theFight = (max) => {
     let winLose = Math.floor(Math.random() * max) + 1
     if (winLose % 2 === 0) {
         readlineSync.keyInPause('Congratulaions! You have defeated the opponent!')
+        awards.push(prizes())
     }else {
         readlineSync.keyInPause("Shame! Continue on your journey and grow stronger!")
     }
@@ -54,11 +51,7 @@ const theFight = (max) => {
 
 // while loop; Tell player to walk or check player
 var hitPoints = player.HP
-<<<<<<< HEAD
 let gameOver = false
-=======
-const gameOver = false
->>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
 while (gameOver === false) {
 var userSelection = readlineSync.question('Would you like to take a walk? TYPE "w" or TYPE "p" to check player ')
 if (userSelection === "p") {
@@ -70,15 +63,12 @@ if (userSelection === "p") {
     var randomWalk = extraRandom(5)
     if (randomWalk === 2 || randomWalk === 3) { //warn user, give option to run or fight & introduce enemy
         let index = randomItem(0, galleryOfFoes.length - 1)
-        var fightFlight = readlineSync.question(`Look out!!! ${galleryOfFoes[index]} approaches! What will you do? Type "run" or "fight" `, {limit: ['run', 'fight']})
+        var fightFlight = readlineSync.question(`Look out!!! ${galleryOfFoes[index].name} approaches! What will you do? Type "run" or "fight" `, {limit: ['run', 'fight']})
         var mightRun = extraRandom(2)
         if (fightFlight === "fight") {
             readlineSync.keyInPause('pow, Slice, boom!')
             theFight(20)
-            let deductHP = extraRandom(player.HP)
-            player.HP -= deductHP
-<<<<<<< HEAD
-            awards.push(prizes())
+            player.HP -= galleryOfFoes[index].AP
             console.log(player)
             console.log(awards)
             hitPoints
@@ -86,20 +76,11 @@ if (userSelection === "p") {
                 console.log("You have been defeated")
                 gameOver = true
             }
-=======
-            // prizes(awards)
-            console.log(player)
-            console.log(prizes(awards))
-            hitPoints
->>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
         }else if (fightFlight === "run" && mightRun === 1) {
-            readlineSync.keyInPause(`You were unable to escape, and ${galleryOfFoes[index]} attacks you.`)
+            readlineSync.keyInPause(`You were unable to escape, and ${galleryOfFoes[index].name} attacks you.`)
             readlineSync.keyInPause('hi-Ya, ooh, Ouch, Wam!')
             theFight(30)
-            let deductHP = extraRandom(player.HP)
-            player.HP -= deductHP
-<<<<<<< HEAD
-            awards.push(prizes())
+            player.HP -= galleryOfFoes[index].AP
             console.log(player)
             console.log(awards)
             hitPoints
@@ -121,22 +102,6 @@ if (userSelection === "p") {
             }
         }
     }else if (randomWalk !== 2 && randomWalk !== 3) {
-=======
-            //prizes(awards)
-            console.log(player)
-            console.log(prizes(awards))
-            hitPoints
-            
-        }else if (fightFlight === "run" && mightRun === 2) {
-            readlineSync.keyInPause("That was close, but you were able to escape.")
-            let deductHP2 = extraRandom(player.HP)
-            player.HP -= deductHP2
-            console.log(player)
-            console.log(awards)
-            hitPoints
-        }
-    }else if (randomWalk !== 2 === randomWalk !== 3) {
->>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
         readlineSync.keyIn(`Traveling can be rough. You found something along the way`)
         var luckitems = randomItem(0, consolationPrize.length - 1)
         let newItem = consolationPrize[luckitems]
@@ -144,17 +109,12 @@ if (userSelection === "p") {
         console.log(player)
         console.log(awards)
         hitPoints
-        //needs to loop back to the beginning
     }else if (player.HP <= 0) {
             console.log("Game Over")
             gameOver = true
         }
     }
-<<<<<<< HEAD
 }
-=======
-}}
->>>>>>> d522d2011b10b49657e5149e41fdb89da581c836
 //console.log(userSelection)
     // attack or run //condition if approached by enemy or not: 2 user is approached
     // if run, random amount of damage, 50% of escaping, user receives message and must "w" - QUESTION readline sync
