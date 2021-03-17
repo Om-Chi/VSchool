@@ -1,6 +1,6 @@
 const readlineSync = require('readline-sync');
 
-//Greet Player w/ message. Ask and store name in variable, const - QUESTION readline sync
+//Greet Player w/ message. Ask and store name in variable
 readlineSync.keyInPause("Welcome to the colossus of all adventures...Colossal Adventure")
 readlineSync.keyInPause("Travel far and defeat the worst villians that pillage and devastate the land.")
 readlineSync.keyInPause("Rules: Along the way you may win awards and gather items to help you on your way.\nWhen approached by an enemy you may cower and run\nbut you will lose HP.")
@@ -8,18 +8,16 @@ readlineSync.keyInPause("However, if you stand your ground and defeat said foe\n
 let playerOne = readlineSync.question('What is your name? ')
 console.log(`Greetings, ${playerOne} and safe travels...`)
 
-//player - array/object to store awards, and empty array to hold user's awards
+//player - array/object to store awards, player information, and empty array to hold user's awards
 let awardsToWin = ['Dagger', 'Book of Secrets', 'Shield', 'First-Aid', 'Boomerang', 'Booster-Boots']
 let consolationPrize = ['snacks', 'beets&Greens', 'water', 'sugar water', 'soup', 'ice', 'goat milk', 'socks', 'blanket']
 let player = {Player1: playerOne, HP: 50}
 let awards = []
-    //player kills enemy, player is awarded items - push() items in player awards
-    //player hits 'p' or 'print', console prints players name, HP and player - some form of readline Sync input method
 
 //The Enemies
 let galleryOfFoes = [{name: "Babla the Funk", AP: 10}, {name: "Scion the Grudge", AP: 15}, {name: "Tempa the Misfit", AP: 25}]
 
-//Returns random
+//Returns randomm index
 function randomItem(min, max) {
     let mathR = Math.random() * (max - min + 1)
     let mathF = Math.floor(mathR) + min
@@ -31,7 +29,7 @@ const prizes = () => {
     return popped
 }
 
-//Random Random - for HP and chances to escape
+//Random Random - for HP and chances to escape etc.
 const extraRandom = (max) => {
     let final = Math.floor(Math.random() * max) + 1
     return final
@@ -101,7 +99,7 @@ if (userSelection === "p") {
                 gameOver = true
             }
         }
-    }else if (randomWalk !== 2 && randomWalk !== 3) {
+    }else if (randomWalk !== 2 || randomWalk !== 3) {
         readlineSync.keyIn(`Traveling can be rough. You found something along the way`)
         var luckitems = randomItem(0, consolationPrize.length - 1)
         let newItem = consolationPrize[luckitems]

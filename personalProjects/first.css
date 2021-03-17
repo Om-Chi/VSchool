@@ -1,24 +1,30 @@
-
-.navi {
-    display: block;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-#popup {
-    display: none;
+#grid-container{
+    display: grid;
+    grid-template: repeat(4, 300px) / repeat(3, 1fr);
 }
-
-.popupContainer {
-    background: cadetblue;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 0 auto;
+header{
+    font-size: medium;
+    /*text color options*/
+    color: #66cdaa;
+    grid-column: 1 /4;
 }
-
-.popTitle {
-
+nav{
+    background-color: cyan;
+    grid-column: 1 / 4;
 }
-
-.popupWrap {
-    background: cadetblue;
-    position: fixed;
-
+.image{
+    background-color: chartreuse;
+    grid-column: 1 / 4;
+}
+main{
+    background-color: crimson;
+}
+footer{
+    background-color: darkorchid;
+    grid-column: 1 / 4;
 }

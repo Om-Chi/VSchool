@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+#main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 50px 200px;
+    gap: 2px 2px;
+}
+
+#body1 {
+    grid-column: 1 / 4;
+    border: 2px solid violet;
+}
+
+#body2 {
+    border: 2px solid coral;
+}
+
+#body3 {
+    border: 2px solid yellowgreen;
+}
+
+#body4 {
+    border: 2px solid magenta;
+}
+
+#head {
+    border: 2px solid springgreen;
+}
+
+#foot {
+    border: 2px solid gold;
+}
+
+#review {
+    grid-column: 1 / 4;
+    border: 2px solid blue;
+}
