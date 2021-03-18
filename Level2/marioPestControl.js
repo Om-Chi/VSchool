@@ -5,3 +5,25 @@
 //how many baddies he caught for Princess Peach so he can send her a bill.//
 
 //Mario says: "It's a-me, Mario! I can proudly say I have caught this a-many ___, and this a-many ___ Oh yeah! And this a-many ____! Book me!"
+
+//Goomba button
+const form1 = document.goomba
+
+form1.addEventListener('submit', function(e) {
+    e.preventDefault()
+    //first button: counter, counts caught enemies
+    
+    //2nd button: capture the value currently caught?
+})
+
+const form2 = document.bobomb
+
+form2.addEventListener('submit', function(v) {
+    v.preventDefault()
+})
+
+const form3 = document.cheep
+
+form3.addEventListener('submit', function(a) {
+    a.preventDefault()
+})
