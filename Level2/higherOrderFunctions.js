@@ -152,11 +152,7 @@ const ages = [
 ]
 
 ages.sort(function(a, b) {
-    if (a.age < b.age) {
-        return a[-1].age
-    }else if (a.age > b.age) {
-        return a[1].age
-    }
-    return a[0].age
+    return a.age - b.age
 })
+
 console.log(ages)
