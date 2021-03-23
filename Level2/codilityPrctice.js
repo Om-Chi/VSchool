@@ -38,19 +38,23 @@
 
 ////////Lesson 3 FrogJump
 
- x = 2
- y = 5
- D = 50
- 
- 
-function FrogJmp(x, y, D) {
-let together = x
-let jumps = 0
-while (together < y) {
-    together += D
-    jumps++
-}
-return jumps
-}
 
-console.log(FrogJmp(0, 20, 5))
+
+// let together = x
+// let jumps = 0
+// while (together < 200) {
+//     together += 10
+//     jumps++}
+
+// console.log(jumps)
+
+function frogJmp(x, y, D) { //unable to properly return jumps
+    let together = x
+    let jumps = 0
+    while (together < y) {
+        together += y
+        jumps++
+    }
+    return jumps
+}
+console.log(frogJmp(2, 10, 200))

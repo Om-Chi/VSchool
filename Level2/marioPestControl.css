@@ -1,25 +1,25 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: lightblue;
+    background-color: skyblue;
 }
 
 #main-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 200px 200px;
+    grid-template-columns: repeat(300px);
+    grid-template-rows: repeat(200px);
     gap: 10px;
     justify-items: center;
-}
-
-#body1 {
-    grid-column: 1 / 4;
-    border: 2px solid violet;
 }
 
 #body2 {
     border: 2px solid coral;
     grid-column: 1 / 2;
+}
+.font {
+    font-family: monospace;
+    font-size: 2em;
+    color: orangered;
 }
 
 #body3 {
@@ -37,11 +37,15 @@ html, body {
 }
 
 #foot {
+    display: grid;
+    grid-template: repeat(100px);
     border: 2px solid gold;
     grid-column: 1 / 4;
 }
 
-.review {
+.total {
     grid-column: 1 / 4;
     border: 2px solid blue;
 }
+
+
