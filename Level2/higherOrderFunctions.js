@@ -106,53 +106,109 @@
 
 //////////////////////////////////////sort()////////////////////////////
 
-//ascending
-const arrNum = [23, 45, 78, 4, 89, 2, ]
+// //ascending
+// const arrNum = [23, 45, 78, 4, 89, 2, ]
 
-arrNum.sort(function(a, b) {
-    return a - b
-})
+// arrNum.sort(function(a, b) {
+//     return a - b
+// })
 
-console.log(arrNum)
+// console.log(arrNum)
 
-//descending
-arrNum.sort(function(a, b) {
-    return b - a
-})
+// //descending
+// arrNum.sort(function(a, b) {
+//     return b - a
+// })
 
-console.log(arrNum)
+// console.log(arrNum)
 
-//string length, ascending
+// //string length, ascending
 
-const theStrings = ["dollar", "me", "fructose", "jawamabam", "larb", "quest", "tik"]
+// const theStrings = ["dollar", "me", "fructose", "jawamabam", "larb", "quest", "tik"]
 
-theStrings.sort(function(a, b){
-    return a.length - b.length
-})
-console.log(theStrings)
+// theStrings.sort(function(a, b){
+//     return a.length - b.length
+// })
+// console.log(theStrings)
 
-//string, alpha-tise
-theStrings.sort(function(a, b) {
-    if (a < b) {
-        return -1
-    } else if (a > b) {
-        return 1
-    }
-    return 0
-})
+// //string, alpha-tise
+// theStrings.sort(function(a, b) {
+//     if (a < b) {
+//         return -1
+//     } else if (a > b) {
+//         return 1
+//     }
+//     return 0
+// })
 
-console.log(theStrings)
+// console.log(theStrings)
 
-//object, age ascending
-const ages = [
-    { name: "Quiet Samurai", age: 22 },
-    { name: "Arrogant Ambassador", age: 100 },
-    { name: "Misunderstood Observer", age: 2 },
-    { name: "Unlucky Swami", age: 77 }
+// //object, age ascending
+// const ages = [
+//     { name: "Quiet Samurai", age: 22 },
+//     { name: "Arrogant Ambassador", age: 100 },
+//     { name: "Misunderstood Observer", age: 2 },
+//     { name: "Unlucky Swami", age: 77 }
+// ]
+
+// ages.sort(function(a, b) {
+//     return a.age - b.age
+// })
+
+// console.log(ages)
+////////////////////////////////////reduce()/////////////////////////////////////
+const theNums = [21, 35, 46, 57, 68, 79, 80, 92]
+
+//add nums in array
+const reduced = theNums.reduce((acc, current) => acc + current)
+
+console.log(reduced)
+
+// const mergeEm = theNums.reduce(function(final, nums){
+    
+//     return 
+// }, "")
+// console.log(mergeEm)
+
+// voters, count
+var voters = [
+    {name:'Bob' , age: 30, voted: true},
+    {name:'Jake' , age: 32, voted: true},
+    {name:'Kate' , age: 25, voted: false},
+    {name:'Sam' , age: 20, voted: false},
+    {name:'Phil' , age: 21, voted: true},
+    {name:'Ed' , age:55, voted:true},
+    {name:'Tami' , age: 54, voted:true},
+    {name: 'Mary', age: 31, voted: false},
+    {name: 'Becky', age: 43, voted: false},
+    {name: 'Joey', age: 41, voted: true},
+    {name: 'Jeff', age: 30, voted: true},
+    {name: 'Zack', age: 19, voted: false}
 ]
 
-ages.sort(function(a, b) {
-    return a.age - b.age
-})
+const theVoted = voters.reduce(function(final, voter){
+    if(voter.voted) {
+        final++
+    }
+    return final
+}, 0)
+console.log(theVoted)
 
-console.log(ages)
+//flatten array of arrays
+var arrays = [
+    ["1", "2", "3"],
+    [true],
+    [4, 5, 6]
+]
+
+const flatFlat = arrays.reduce(function(final, arr) {
+    final.concat(arr)
+    final.push()
+    return final
+}, 0)
+
+console.log(flatFlat)
+//////////// random() sucks
+
+/////////////////////////////////////////////////////////////////////////
+

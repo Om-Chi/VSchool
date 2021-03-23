@@ -1,5 +1,5 @@
 
-// //**  Lesson 2: Arrays; Rotate items in a an array to teh Right*/
+//**  Lesson 2: Arrays; Rotate items in a an array to teh Right*/
 // var array = [3, 8, 9, 7, 6] //any array
 // function rotate(arr, k) {
 //     if (arr.length > k) { //in case, the length of the array exceeds the number of rotations
@@ -17,21 +17,40 @@
 
 
 
-function solution(A) {
-    let N = [...A]
-    N.sort(function(a, b) {return b-a})
-    while (N.length) {
-        if (N[0]==N[1]) {
-            N.splice(0,2) 
-        } else if (N[1]==N[2]){
-            N.splice(1, 2)
-        }
-        if(N[1]==undefined) {
-            return parseInt(N.join(""))
-        }
-    }
+// function solution(A) {
+//     let N = [...A]
+//     N.sort(function(a, b) {return b-a})
+//     while (N.length) {
+//         if (N[0]==N[1]) {
+//             N.splice(0,2) 
+//         } else if (N[1]==N[2]){
+//             N.splice(1, 2)
+//         }
+//         if(N[1]==undefined) {
+//             return parseInt(N.join(""))
+//         }
+//     }
+// }
+
+// const nums = [1, 4, 4, 6, 8, 8, 6]
+// const moreNums = [9, 3, 9, 3, 9, 7, 9]
+// console.log(solution(moreNums))
+
+////////Lesson 3 FrogJump
+
+ x = 2
+ y = 5
+ D = 50
+ 
+ 
+function FrogJmp(x, y, D) {
+let together = x
+let jumps = 0
+while (together < y) {
+    together += D
+    jumps++
+}
+return jumps
 }
 
-const nums = [1, 4, 4, 6, 8, 8, 6]
-const moreNums = [9, 3, 9, 3, 9, 7, 9]
-console.log(solution(moreNums))
+console.log(FrogJmp(0, 20, 5))

@@ -8,9 +8,13 @@
 
 //Goomba button
 const form1 = document.goomba
+var counting= document.getElementById("demo"),
+  count = 0;
 
 form1.addEventListener('submit', function(e) {
     e.preventDefault()
+    count += 1
+    counting.innerHTML = "Click " + count
     //first button: counter, counts caught enemies
     
     //2nd button: capture the value currently caught?

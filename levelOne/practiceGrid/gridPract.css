@@ -4,7 +4,7 @@ html, body {
   }
   
   /*exercise ONE*/
-.container {
+/* .container {
     display: grid;
     grid-gap: 8px;
     color: darkgrey;
@@ -37,7 +37,7 @@ html, body {
 .yellow {
     background-color: gold;
     grid-column: 1/-1;
-}
+} */
 
 /*exercise TWO*/
 /*.container {

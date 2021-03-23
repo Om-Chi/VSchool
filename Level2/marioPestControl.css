@@ -7,8 +7,8 @@ html, body {
 #main-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 50px 200px;
-    gap: 2px 2px;
+    grid-template-rows: 100px 200px 200px;
+    gap: 10px;
     justify-items: center;
 }
 
@@ -19,6 +19,7 @@ html, body {
 
 #body2 {
     border: 2px solid coral;
+    grid-column: 1 / 2;
 }
 
 #body3 {
@@ -31,10 +32,13 @@ html, body {
 
 #head {
     border: 2px solid springgreen;
+    padding-top: 25px;
+    grid-column: 1 / 4;
 }
 
 #foot {
     border: 2px solid gold;
+    grid-column: 1 / 4;
 }
 
 .review {
