@@ -40,21 +40,21 @@
 
 
 
-// let together = x
+// let together = 2
 // let jumps = 0
 // while (together < 200) {
 //     together += 10
 //     jumps++}
 
-// console.log(jumps)
+// console.log(jumps) //20 jumps
 
 function frogJmp(x, y, D) { //unable to properly return jumps
     let together = x
     let jumps = 0
     while (together < y) {
-        together += y
+        together += D
         jumps++
     }
-    return jumps
+    console.log(jumps)
 }
-console.log(frogJmp(2, 10, 200))
+frogJmp(50, 100000000, 26)

@@ -159,18 +159,16 @@
 ////////////////////////////////////reduce()/////////////////////////////////////
 const theNums = [21, 35, 46, 57, 68, 79, 80, 92]
 
-//add nums in array
+///////////1. add nums in array
 const reduced = theNums.reduce((acc, current) => acc + current)
 
 console.log(reduced)
 
-// const mergeEm = theNums.reduce(function(final, nums){
-    
-//     return 
-// }, "")
-// console.log(mergeEm)
+///////////3. convert into strings
+const mergeEm = theNums.reduce((final, nums) => final + ", " + nums)
+console.log(mergeEm)
 
-// voters, count
+///////////3. voters, count
 var voters = [
     {name:'Bob' , age: 30, voted: true},
     {name:'Jake' , age: 32, voted: true},
@@ -194,21 +192,37 @@ const theVoted = voters.reduce(function(final, voter){
 }, 0)
 console.log(theVoted)
 
-//flatten array of arrays
-var arrays = [
-    ["1", "2", "3"],
-    [true],
-    [4, 5, 6]
+///////////4. buy Everything at once
+
+var wishlist = [
+    { title: "Tesla Model S", price: 90000 },
+    { title: "4 carat diamond ring", price: 45000 },
+    { title: "Fancy hacky Sack", price: 5 },
+    { title: "Gold fidgit spinner", price: 2000 },
+    { title: "A second Tesla Model S", price: 90000 }
 ]
 
-const flatFlat = arrays.reduce(function(final, arr) {
-    final.concat(arr)
-    final.push()
-    return final
-}, 0)
+const addPrice = wishlist.reduce(function(final, cost) {
+    return final + cost.price
+}, 0) 
 
-console.log(flatFlat)
-//////////// random() sucks
+console.log(addPrice)
+
+
+// //flatten array of arrays
+// var arrays = [
+//     ["1", "2", "3"],
+//     [true],
+//     [4, 5, 6]
+// ]
+
+// const flatFlat = arrays.reduce(function(final, arr) {
+//     final.concat(arr)
+//     final.push()
+//     return final
+// }, 0)
+
+// console.log(flatFlat)
 
 /////////////////////////////////////////////////////////////////////////
 
