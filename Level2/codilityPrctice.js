@@ -48,13 +48,57 @@
 
 // console.log(jumps) //20 jumps
 
-function frogJmp(x, y, D) { //unable to properly return jumps
-    let together = x
-    let jumps = 0
-    while (together < y) {
-        together += D
-        jumps++
+// function frogJmp(x, y, D) { //unable to properly return jumps
+//     let together = x
+//     let jumps = 0
+//     while (together < y) {
+//         together += D
+//         jumps++
+//     }
+//     console.log(jumps)
+// }
+// frogJmp(50, 100000000, 26)
+
+//create count -> find min -> find max -> as long as 
+// function sumAll([a, b]) {
+//     plusOne = 1 //maybe zero
+//     let min = Math.min(a, b)
+//     let max = Math.max(a, b)
+//     while (min < max) {
+//         plusOne++
+//     }
+
+// }
+
+// plusOne = 1 //maybe zero
+// let min = Math.min(10, 5)
+// let max = Math.max(10, 5)
+// while (min < max) {
+//     plusOne++}
+// console.log(typeof plusOne) //gives me no typeof, of any kind of input
+    
+
+// //research - find min & max then use reduce
+// function sumAll(arr) {
+//     let eList = []
+//     let min = Math.min(5, 10)
+//     let max = Math.max(5, 10)
+
+//  for(var i = min; i <= max; i++) {
+//     eList.push(i)
+//  }
+//  const newList = eList.reduce((final, num) => final += num)
+// }
+// console.log(newList)
+
+function sumAll(arr) {
+    let eList = 0
+    let min = arr[0]
+    let max = arr[1]
+    for(var i = min; i <= max; i++) {
+        eList += i
+        console.log(eList)
     }
-    console.log(jumps)
+    return eList
 }
-frogJmp(50, 100000000, 26)
+console.log(sumAll([5, 10]))

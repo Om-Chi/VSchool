@@ -11,39 +11,41 @@
         <div id="head"><img src="https://fontmeme.com/permalink/210317/d481521a1f1b05138b95569d0ba4cccd.png" alt="super-mario-font - fontmeme.com"></div>
         <div id="body2">
             <p class="font">Goombas</p><br>
-            <img src="Goomba.png" alt="Goomba" width="200px"><br>
+            <img src="Goomba.png" alt="Goomba" width="150px"><br>
             <form name="GInput">
-                <p class="font">30 Coins</p>
-                <input type="text">
+                <p class="font">5 Coins</p>
+                <input id="goomba" type="number" name="catch">
             </form>
         </div>   
         <div id="body3">
             <p class="font">Bob-Ombs</p><br>
-            <img src="Bob-ombs-removebg-preview.png" alt="Bob-Ombs" width="240px"><br>
+            <img src="Bob-ombs-removebg-preview.png" alt="Bob-Ombs" width="200px"><br>
             <form name="BInput">
-                <p class="font">50 Coins</p>
-                <input type="text">
+                <p class="font">2 Coins</p>
+                <input id="bobomb" type="number" name="catches">
             </form>
         </div>
         <div id="body4">
             <p class="font"> Cheep-Cheeps</p><br>
-            <img src="Cheep_Cheep.png" alt="Cheep-Cheeps" width="240px"><br>
+            <img src="Cheep_Cheep.png" alt="Cheep-Cheeps" width="200px"><br>
             <form name="CInput">
-                <p class="font">60 Coins</p>
-                <input type="text">
+                <p class="font">10 Coins</p>
+                <input id="cheep" type="number" name="catching">
             </form>
         </div>
-        <div class="total">TOTAL BADDIES CAUGHT</div>
+        <div id="baddies">
+            <form name="total">
+                <audio id="coins" src="8d82b5_Super_Mario_Bros_Coin_Sound_Effect.mp3"></audio>
+                <input type="text" id="C" value="">
+                <button>Total Baddies Cost</button> <input type="button" onclick="reset()" value="Reset">
+            </form>
+        </div>
         <footer id="foot">
-            <p>Contact Mario</p><br>
-            <p>REVIEWS ⭐⭐⭐⭐⭐ Princess Peach "Mario is super(?)...blah blah blah"</p><br>
-            <p></p> 
+            <p class="font2">Email Mario: mario.bro@MPC.com</p>
+            <p class="font2">Come See Mario: Somewhere in Mushroom Kingdom or Brooklyn, NY</p>
+            <p class="font2">wwww.MarioPestControl.com</p>
         </footer>
     </div>
     <script src="marioPestControl.js"></script>
 </body>
 </html>
-<!--Changed web and will continue because was not pleased-->
-<!--Choose better color scheme
-Change font for heading
-resize "total" and "foot" & provide a background color-->

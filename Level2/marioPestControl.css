@@ -9,43 +9,64 @@ html, body {
     grid-template-columns: repeat(300px);
     grid-template-rows: repeat(200px);
     gap: 10px;
-    justify-items: center;
+    justify-content: center;
 }
 
 #body2 {
-    border: 2px solid coral;
-    grid-column: 1 / 2;
+
+    border-right: 2px solid coral;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 .font {
     font-family: monospace;
     font-size: 2em;
-    color: orangered;
+    color: blue;
+}
+.font2 {
+    font-family: copperplate;
+    font-size: 1em;
 }
 
 #body3 {
-    border: 2px solid yellowgreen;
+    border-right: 2px solid coral;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #body4 {
-    border: 2px solid magenta;
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #head {
-    border: 2px solid springgreen;
     padding-top: 25px;
     grid-column: 1 / 4;
 }
 
 #foot {
-    display: grid;
-    grid-template: repeat(100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 2px solid gold;
     grid-column: 1 / 4;
 }
 
-.total {
+#baddies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid orangered;
+    padding-top: 15px;
     grid-column: 1 / 4;
-    border: 2px solid blue;
 }
 
 

@@ -1,33 +1,47 @@
-//Princess Peach has a huge infestation of Goombas, Bob-ombs, and//
-//Cheep-cheeps, and has commissioned Mario to take care of her pest problem.//
-//Mario did the job, but he is having trouble keep track of how many he//
-//has caught and has asked you to build him a website that keeps track of//
-//how many baddies he caught for Princess Peach so he can send her a bill.//
-
-//Mario says: "It's a-me, Mario! I can proudly say I have caught this a-many ___, and this a-many ___ Oh yeah! And this a-many ____! Book me!"
+const para = document.getElementById('caught')
 
 //Goomba button
-const form1 = document.goomba
-var counting= document.getElementById("demo"),
-  count = 0;
-
+const form1 = document.GInput
 form1.addEventListener('submit', function(e) {
     e.preventDefault()
-    count += 1
-    counting.innerHTML = "Click " + count
-    //first button: counter, counts caught enemies
-    
-    //2nd button: capture the value currently caught?
+    let gotcha = parseInt(form1.catch.value)
+    baddiesArr.push(gotcha)
+    form1.catch.value = ""
 })
-
-const form2 = document.bobomb
-
+//BOBomb button
+const form2 = document.BInput
 form2.addEventListener('submit', function(v) {
     v.preventDefault()
+    let gotEm = parseInt(form2.catches.value)
+    baddiesArr.push(gotEm)
+    form2.catches.value = ""
 })
-
-const form3 = document.cheep
-
+//CheepCheep button
+const form3 = document.CInput
 form3.addEventListener('submit', function(a) {
     a.preventDefault()
+    let gotIt = parseInt(form3.catching.value)
+    baddiesArr.push(gotIt)
+    form3.catching.value = ""
+})
+
+const formTotal = document.total
+
+formTotal.addEventListener('submit', function(t) {
+    t.preventDefault()
+    let x = Number(document.getElementById("goomba").value) * 5
+    let y = Number(document.getElementById("bobomb").value) * 2
+    let z = Number(document.getElementById("cheep").value) * 10
+    
+
+    let a = x + y + z
+
+    document.getElementById('C').value = a
+    function reset() {
+        document.getElementById("caught").reset()
+    }
+
+    //Coin Audio Function
+    let coin = document.getElementById("coins")
+    coin.play()
 })
